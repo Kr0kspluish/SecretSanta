@@ -1,0 +1,6 @@
+credentials.json
+token.pickle
+__pycache__
+addresses.csv
+message.txt
+sender_email
