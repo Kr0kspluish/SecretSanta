@@ -49,4 +49,13 @@ Object of the email that will be sent. This parameter is mandatory.\
 If you want to leave the object empty, use \"-o ''\"."
         )
 
+    parser.add_argument(
+        '-s', '--save-draw',
+        action='store_true',
+        dest='save_draw',
+        default=False,
+        help="\
+Dump the draw in the file draw.txt."
+    )
+
     return parser.parse_args()

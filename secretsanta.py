@@ -43,6 +43,10 @@ vprint(2, "\tList of participants after shuffle:\n\t",
     )
 vprint(1)
 
+if args.save_draw:
+    with open("draw.txt", "w") as out_f:
+        out_f.write("\n".join([p['name'] for p in people]))
+
 # Read the generic message to send to participants.
 vprint(1, "Reading the generic message from %s..."%args.message_file, flush=True)
 with open(args.message_file, 'r') as message_in:
