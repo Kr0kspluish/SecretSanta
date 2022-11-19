@@ -19,7 +19,7 @@
 This what is returned by `./secretsanta.py -h`:
 
 ```
-usage: secretsanta.py [-h] [-v] [-d] [-a addr_file] [-m message_file]
+usage: secretsanta.py [-h] [-v] [-d] [-a addr_file] [-m message_file] -o email_object [-s]
 
 Send an email to each participant of a secret santa to tell them who their secret child is.
 
@@ -28,9 +28,13 @@ optional arguments:
   -v, --verbose
   -d, --dry-run         Do not actually send the emails, but do everything else, including authentication to Google API.
   -a addr_file, --addr-file addr_file
-                        Path to a CSV file containing name and email addresses of the participants. Defaults to `addresses.csv`. Each line of the
-                        file should be in the format `name,email`. `name` can contain any special character (including spaces) except comma (,).
+                        Path to a CSV file containing name and email addresses of the participants. Defaults to `addresses.csv`. Each line of
+                        the file should be in the format `name,email`. `name` can contain any special character (including spaces) except comma
+                        (,).
   -m message_file, --message-file message_file
-                        Path to a text file containing the message to send. Defaults to `addresses.csv`. The macros SANTA and CHILD will be replaced
-                        with the names of the persons as provided in the addresses file.
+                        Path to a text file containing the message to send. Defaults to `addresses.csv`. The macros SANTA and CHILD will be
+                        replaced with the names of the persons as provided in the addresses file.
+  -o email_object, --object email_object
+                        Object of the email that will be sent. This parameter is mandatory.If you want to leave the object empty, use "-o ''".
+  -s, --save-draw       Dump the draw in the file draw.txt.
 ``` 
