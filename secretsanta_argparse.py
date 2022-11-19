@@ -38,4 +38,15 @@ The macros SANTA and CHILD will be replaced with the names of the persons as \
 provided in the addresses file."
         )
 
+    parser.add_argument(
+        "-o", "--object",
+        action='store',
+        dest='email_object',
+        metavar='email_object',
+        required=True,
+        help="\
+Object of the email that will be sent. This parameter is mandatory.\
+If you want to leave the object empty, use \"-o ''\"."
+        )
+
     return parser.parse_args()

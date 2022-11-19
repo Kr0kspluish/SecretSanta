@@ -69,7 +69,7 @@ for i in range(n):
     send_email(
         sender_email,
         santa['email'], 
-        'secret santa', 
+        args.email_object, 
         custom_message, 
         service=google_session,
         verbose=(args.verbose >= 3),
