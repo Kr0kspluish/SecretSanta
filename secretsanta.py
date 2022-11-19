@@ -27,8 +27,8 @@ vprint(1, "Reading addresses from %s..."%args.addr_file, flush=True)
 with open(args.addr_file, 'r', newline='') as csv_in:
     reader = csv.reader(csv_in)
     for p in reader:
-        people.append({"name":p[0], "email":p[1]})
-        vprint(2, "\tFound new person: name=%s, email=%s"%(p[0],p[1]))
+        people.append({"name":p[0], "email":p[1].strip()})
+        vprint(2, "\tFound new person: name=%s, email=%s"%(p[0],p[1].strip()))
 vprint(1, "Finished reading addresses.\n")
 
 # Do the random draw. 
